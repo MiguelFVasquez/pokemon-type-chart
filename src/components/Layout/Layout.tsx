@@ -15,7 +15,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         {children}
       </main>
       <footer className={styles.footer}>
-        <p>Powered by PokeAPI</p>
+        <div className={styles.footerContent}>
+          <p>Data sourced from <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">PokéAPI</a></p>
+          <p className={styles.disclaimer}>
+            Pokémon and Pokémon character names are trademarks of Nintendo. 
+            Built for educational purposes.
+          </p>
+        </div>
       </footer>
     </div>
   );

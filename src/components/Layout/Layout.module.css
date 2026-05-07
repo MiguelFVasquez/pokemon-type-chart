@@ -38,11 +38,34 @@
 }
 
 .footer {
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   text-align: center;
   background-color: var(--pkmn-blue);
+  color: white;
+  border-top: 5px solid var(--pkmn-yellow);
+}
+
+.footerContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footerContent a {
   color: var(--pkmn-yellow);
-  font-family: 'Pokemon Solid', sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footerContent a:hover {
+  text-decoration: underline;
+}
+
+.disclaimer {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  opacity: 0.8;
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.4;
 }
 
 @media (max-width: 768px) {
