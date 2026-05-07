@@ -2,39 +2,51 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #f0f0f0;
-  background-image: radial-gradient(#d1d1d1 1px, transparent 1px);
-  background-size: 20px 20px;
-  font-family: 'Pokemon Solid', sans-serif;
+  background-color: #f8f9fa;
+  /* Usando RGBA directamente en el gradiente para la opacidad */
+  background-image: radial-gradient(rgba(59, 76, 202, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
 }
 
 .header {
-  background-color: #ef5350;
-  color: #ffcb05;
-  padding: 1rem;
+  background-color: var(--pkmn-yellow);
+  color: var(--pkmn-blue);
+  padding: 1.2rem 1.5rem; /* Reducido de 1.5rem a 1.2rem (aprox 20% menos) */
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  border-bottom: 4px solid #3b4cca;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-bottom: 6px solid var(--pkmn-blue);
+  width: 100%;
+  box-sizing: border-box;
 }
+
 
 .title {
   margin: 0;
-  font-size: 2.5rem;
-  text-shadow: 2px 2px #3b4cca;
-  letter-spacing: 2px;
+  font-family: 'Pokemon Solid', sans-serif;
+  font-size: clamp(2rem, 8vw, 4rem);
+  text-shadow: 3px 3px 0px white;
+  letter-spacing: 4px;
 }
 
 .content {
   flex: 1;
   padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
   width: 100%;
+  max-width: 1400px; /* Aumentado para aprovechar más ancho */
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .footer {
   padding: 1rem;
   text-align: center;
-  background-color: #333;
-  color: white;
+  background-color: var(--pkmn-blue);
+  color: var(--pkmn-yellow);
+  font-family: 'Pokemon Solid', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 1rem;
+  }
 }
