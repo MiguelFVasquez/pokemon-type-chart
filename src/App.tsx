@@ -2,6 +2,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { PokemonProvider } from './context/PokemonContext';
 import Layout from './components/Layout/Layout';
 import TypeSelector from './features/search/TypeSelector';
+import TypeEffectiveness from './features/comparison/TypeEffectiveness';
 import './App.css';
 
 const queryClient = new QueryClient();
@@ -12,9 +13,7 @@ function App() {
       <PokemonProvider>
         <Layout>
           <TypeSelector />
-          <div style={{ textAlign: 'center', marginTop: '2rem' }}>
-            <p>Welcome to the Pokemon Type Chart! Select a type above to see its effectiveness.</p>
-          </div>
+          <TypeEffectiveness />
         </Layout>
       </PokemonProvider>
     </QueryClientProvider>

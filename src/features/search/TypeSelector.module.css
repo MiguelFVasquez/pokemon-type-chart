@@ -1,19 +1,66 @@
 .selector {
-  margin-bottom: 2rem;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 2rem;
-  border-radius: 15px;
-  border: 3px solid var(--pkmn-blue);
-  box-shadow: 8px 8px 0px var(--pkmn-yellow);
+  margin-bottom: 1.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.2rem 2rem;
+  border-radius: 12px;
+  border: 2px solid var(--pkmn-blue);
+  box-shadow: 4px 4px 0px var(--pkmn-yellow);
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .selector h2 {
   font-family: 'Pokemon Solid', sans-serif;
   color: var(--pkmn-blue);
-  margin-top: 0;
-  margin-bottom: 1.5rem;
-  font-size: 1.8rem;
+  margin: 0;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.clearButton {
+  padding: 4px 8px;
+  background-color: #f8f9fa;
+  color: #666;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: sans-serif; /* Cambiado a sans-serif para mejor legibilidad */
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.clearButton:hover {
+  background-color: var(--pkmn-red);
+  color: white;
+  border-color: var(--pkmn-red);
+}
+
+.warning {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
   text-align: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: 1px solid #ffeeba;
+  animation: fadeIn 0.3s ease;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .grid {
@@ -51,6 +98,14 @@
 .typeButton:active {
   transform: translateY(1px);
   box-shadow: inset 0 1px 0 rgba(0,0,0,0.1), 0 1px 0 rgba(0,0,0,0.2);
+}
+
+.selected {
+  outline: 4px solid var(--pkmn-yellow);
+  outline-offset: -2px;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--pkmn-yellow);
+  z-index: 1;
 }
 
 /* Colores de tipos ajustados para mejor legibilidad */

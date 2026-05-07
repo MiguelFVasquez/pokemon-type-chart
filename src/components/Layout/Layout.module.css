@@ -11,10 +11,10 @@
 .header {
   background-color: var(--pkmn-yellow);
   color: var(--pkmn-blue);
-  padding: 1.2rem 1.5rem; /* Reducido de 1.5rem a 1.2rem (aprox 20% menos) */
+  padding: 0.8rem 1.5rem;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  border-bottom: 6px solid var(--pkmn-blue);
+  border-bottom: 5px solid var(--pkmn-blue);
   width: 100%;
   box-sizing: border-box;
 }
@@ -23,9 +23,9 @@
 .title {
   margin: 0;
   font-family: 'Pokemon Solid', sans-serif;
-  font-size: clamp(2rem, 8vw, 4rem);
-  text-shadow: 3px 3px 0px white;
-  letter-spacing: 4px;
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  text-shadow: 2px 2px 0px white;
+  letter-spacing: 2px;
 }
 
 .content {
