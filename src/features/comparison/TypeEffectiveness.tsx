@@ -1,10 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { usePokemonContext } from '../../context/PokemonContext';
 import { useCombinedEffectiveness, useTypes } from '../../hooks/usePokemonData';
 import styles from './TypeEffectiveness.module.css';
 import typeStyles from '../search/TypeSelector.module.css';
 
 const TypeEffectiveness: React.FC = () => {
+  const { t } = useTranslation();
   const { selectedTypes } = usePokemonContext();
   const { effectiveness, isLoading, isError } = useCombinedEffectiveness(selectedTypes);
   const { data: allTypes } = useTypes();
@@ -12,12 +14,12 @@ const TypeEffectiveness: React.FC = () => {
   if (selectedTypes.length === 0) {
     return (
       <div className={styles.placeholder}>
-        <p>Select one or two types above to see their combined defensive effectiveness.</p>
+        <p>{t('effectiveness.placeholder')}</p>
       </div>
     );
   }
-  if (isLoading) return <div className={styles.loading}>Analyzing type effectiveness...</div>;
-  if (isError) return <div className={styles.error}>Error calculating effectiveness</div>;
+  if (isLoading) return <div className={styles.loading}>{t('effectiveness.analyzing')}</div>;
+  if (isError) return <div className={styles.error}>{t('common.error')}</div>;
   if (!effectiveness) return null;
 
   const grouped = {
@@ -49,8 +51,8 @@ const TypeEffectiveness: React.FC = () => {
         </h3>
         <div className={styles.typeGrid}>
           {types.map(type => (
-            <div key={type} className={`${typeStyles.typeButton} ${typeStyles[type]}`}>
-              {type}
+            <div key={type} className={`${typeStyles.typeButton} ${typeStyles[type.toLowerCase()]}`}>
+              {t(`types.${type.toLowerCase()}`)}
             </div>
           ))}
         </div>
@@ -61,15 +63,15 @@ const TypeEffectiveness: React.FC = () => {
   return (
     <section className={styles.container}>
       <h2 className={styles.title}>
-        Effectiveness against: {selectedTypes.join(' / ')}
+        {t('effectiveness.title')}: {selectedTypes.map(type => t(`types.${type.toLowerCase()}`)).join(' / ')}
       </h2>
       
       <div className={styles.results}>
-        {renderGroup('Super Weak', grouped.superWeak, '4x', styles.superWeak)}
-        {renderGroup('Weak', grouped.weak, '2x', styles.weak)}
-        {renderGroup('Resistant', grouped.resistant, '0.5x', styles.resistant)}
-        {renderGroup('Super Resistant', grouped.superResistant, '0.25x', styles.superResistant)}
-        {renderGroup('Immune', grouped.immune, '0x', styles.immune)}
+        {renderGroup(t('effectiveness.super_weak'), grouped.superWeak, '4x', styles.superWeak)}
+        {renderGroup(t('effectiveness.weak'), grouped.weak, '2x', styles.weak)}
+        {renderGroup(t('effectiveness.resistant'), grouped.resistant, '0.5x', styles.resistant)}
+        {renderGroup(t('effectiveness.super_resistant'), grouped.superResistant, '0.25x', styles.superResistant)}
+        {renderGroup(t('effectiveness.immune'), grouped.immune, '0x', styles.immune)}
       </div>
     </section>
   );

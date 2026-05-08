@@ -1,0 +1,48 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "clear": "Clear selection"
+  },
+  "layout": {
+    "title": "Pokémon Type Chart",
+    "footer": "Data sourced from PokéAPI",
+    "disclaimer": "Pokémon and Pokémon character names are trademarks of Nintendo. Built for educational purposes."
+  },
+  "selector": {
+    "title": "Select Pokémon Types",
+    "limit_warning": "Maximum 2 types can be selected",
+    "loading": "Loading types..."
+  },
+  "effectiveness": {
+    "title": "Effectiveness against",
+    "placeholder": "Select one or two types above to see their combined defensive effectiveness.",
+    "analyzing": "Analyzing type effectiveness...",
+    "super_weak": "Super Weak",
+    "weak": "Weak",
+    "resistant": "Resistant",
+    "super_resistant": "Super Resistant",
+    "immune": "Immune"
+  },
+  "types": {
+    "normal": "Normal",
+    "fire": "Fire",
+    "water": "Water",
+    "electric": "Electric",
+    "grass": "Grass",
+    "ice": "Ice",
+    "fighting": "Fighting",
+    "poison": "Poison",
+    "ground": "Ground",
+    "flying": "Flying",
+    "psychic": "Psychic",
+    "bug": "Bug",
+    "rock": "Rock",
+    "ghost": "Ghost",
+    "dragon": "Dragon",
+    "steel": "Steel",
+    "fairy": "Fairy",
+    "dark": "Dark",
+    "stellar": "Stellar"
+  }
+}

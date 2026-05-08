@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.langBtn {
+  background: white;
+  border: 2px solid var(--pkmn-blue);
+  color: var(--pkmn-blue);
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+  box-shadow: 2px 2px 0px var(--pkmn-yellow);
+}
+
+.langBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 3px 3px 0px var(--pkmn-yellow);
+}
+
+.langBtn.active {
+  background-color: var(--pkmn-yellow);
+  color: var(--pkmn-blue);
+  border-color: var(--pkmn-blue);
+}

@@ -1,0 +1,48 @@
+{
+  "common": {
+    "loading": "Cargando...",
+    "error": "Ha ocurrido un error",
+    "clear": "Limpiar selección"
+  },
+  "layout": {
+    "title": "Tabla de Tipos Pokémon",
+    "footer": "Datos obtenidos de PokéAPI",
+    "disclaimer": "Pokémon y los nombres de los personajes son marcas registradas de Nintendo. Construido con fines educativos."
+  },
+  "selector": {
+    "title": "Selecciona Tipos de Pokémon",
+    "limit_warning": "Se pueden seleccionar máximo 2 tipos",
+    "loading": "Cargando tipos..."
+  },
+  "effectiveness": {
+    "title": "Efectividad contra",
+    "placeholder": "Selecciona uno o dos tipos arriba para ver su efectividad defensiva combinada.",
+    "analyzing": "Analizando efectividad de tipos...",
+    "super_weak": "Súper Débil",
+    "weak": "Débil",
+    "resistant": "Resistente",
+    "super_resistant": "Súper Resistente",
+    "immune": "Inmune"
+  },
+  "types": {
+    "normal": "Normal",
+    "fire": "Fuego",
+    "water": "Agua",
+    "electric": "Eléctrico",
+    "grass": "Planta",
+    "ice": "Hielo",
+    "fighting": "Lucha",
+    "poison": "Veneno",
+    "ground": "Tierra",
+    "flying": "Volador",
+    "psychic": "Psíquico",
+    "bug": "Bicho",
+    "rock": "Roca",
+    "ghost": "Fantasma",
+    "dragon": "Dragón",
+    "steel": "Acero",
+    "fairy": "Hada",
+    "dark": "Siniestro",
+    "stellar": "Estelar"
+  }
+}
