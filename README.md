@@ -20,7 +20,7 @@ Una aplicación interactiva para explorar los tipos de Pokémon, sus debilidades
 Este proyecto utiliza la [PokéAPI](https://pokeapi.co/).
 
 ### Disclaimer
-"Data sourced from PokéAPI. Built for educational purposes. Pokémon and Pokémon character names are trademarks of Nintendo."
+Data sourced from PokéAPI. Built for educational purposes. Pokémon and Pokémon character names are trademarks of Nintendo.
 
 Este es un proyecto impulsado por fans y para fans. No tengo ninguna afiliación con Nintendo, Creatures Inc., Game Freak o The Pokémon Company.
 
